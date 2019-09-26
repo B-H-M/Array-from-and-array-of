@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array from</title>
+</head>
+<body>
+
+    <div class="people">
+        <p>Murphy</p>
+        <p>Jaybee</p>
+        <p>Emjay</p>
+        <p>Houri</p>
+
+    </div>
+
+    <script>
+
+        //Array from
+
+        const people = Array.from(document.querySelectorAll('.people p'));
+        const name = people.map(person => person.textContent);
+        console.log(name)
+
+        // const people = document.querySelectorAll('.people p');
+        // const peopleArray = Array.from(people);
+        // const name = peopleArray.map(person => person.textContent);
+        // console.log(name)
+    
+
+    function sumAll(){
+        const nums = Array.from(arguments);
+        return nums.reduce((prev, next) => prev + next, 0 );
+
+    }
+    sumAll(34,23,4,56,77,8,89,9,87,65,44,5,65,8,9,7,65,4);
+
+    
+    //Array Of
+
+    const age = Array.of(34,5,6,7,6,5,67,433,645,7,)
+    console.log(age);
+    </script>
+    
+</body>
+</html>
